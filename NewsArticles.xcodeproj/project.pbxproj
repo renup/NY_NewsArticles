@@ -16,6 +16,7 @@
 		A7C91916261D40D40040139E /* NewsCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7C91915261D40D40040139E /* NewsCoordinator.swift */; };
 		A7C9191B261D41190040139E /* APIConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7C9191A261D41190040139E /* APIConfiguration.swift */; };
 		A7C9191E261D412A0040139E /* APIRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7C9191D261D412A0040139E /* APIRouter.swift */; };
+		A7C91926261FB1A80040139E /* URLSession+Utility.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7C91925261FB1A80040139E /* URLSession+Utility.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +31,7 @@
 		A7C91915261D40D40040139E /* NewsCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsCoordinator.swift; sourceTree = "<group>"; };
 		A7C9191A261D41190040139E /* APIConfiguration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIConfiguration.swift; sourceTree = "<group>"; };
 		A7C9191D261D412A0040139E /* APIRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIRouter.swift; sourceTree = "<group>"; };
+		A7C91925261FB1A80040139E /* URLSession+Utility.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "URLSession+Utility.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -112,6 +114,7 @@
 		A7C91920261D41310040139E /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
+				A7C91925261FB1A80040139E /* URLSession+Utility.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -186,6 +189,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				A7C9191E261D412A0040139E /* APIRouter.swift in Sources */,
+				A7C91926261FB1A80040139E /* URLSession+Utility.swift in Sources */,
 				A749CFD726098B9B000D0A4B /* NewsSearchViewController.swift in Sources */,
 				A7C9191B261D41190040139E /* APIConfiguration.swift in Sources */,
 				A749CFD326098B9B000D0A4B /* AppDelegate.swift in Sources */,

@@ -1,0 +1,168 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Bucket
+   uuid = "A7928805-9991-4A77-B566-FE5F02FBB158"
+   type = "1"
+   version = "2.0">
+   <Breakpoints>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "0189BF3E-680B-4C10-989E-5D79B5730A16"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "NewsArticles/ViewModels/NewsSearchViewModel.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "44"
+            endingLineNumber = "44"
+            landmarkName = "getNews(for:_:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "2A533A01-BD1F-47A9-B6D4-54FAC24A4700"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "NewsArticles/Network/Routers/APIRouter.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "51"
+            endingLineNumber = "51"
+            landmarkName = "fetch(route:completion:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "47D946D3-61F0-400E-9A14-FF091C5A31C8"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "NewsArticles/Network/Routers/APIRouter.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "57"
+            endingLineNumber = "57"
+            landmarkName = "fetch(route:completion:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "47D946D3-61F0-400E-9A14-FF091C5A31C8 - 7246f067fbda4069"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "(extension in NewsArticles):NewsArticles.APIRouter.fetch&lt;A where A1: Swift.Decodable&gt;(route: NewsArticles.APIConfiguration, completion: (Swift.Result&lt;A1, NewsArticles.APIError&gt;) -&gt; ()) -&gt; ()"
+                  moduleName = "NewsArticles"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/apunjabi/Documents/iOS%20Projects/NewsArticles/NewsArticles/Network/Routers/APIRouter.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "57"
+                  endingLineNumber = "57"
+                  offsetFromSymbolStart = "455">
+               </Location>
+               <Location
+                  uuid = "47D946D3-61F0-400E-9A14-FF091C5A31C8 - ecc9269468a0b627"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (Swift.Result&lt;(__C.NSURLResponse, Foundation.Data), Swift.Error&gt;) -&gt; () in (extension in NewsArticles):NewsArticles.APIRouter.fetch&lt;A where A1: Swift.Decodable&gt;(route: NewsArticles.APIConfiguration, completion: (Swift.Result&lt;A1, NewsArticles.APIError&gt;) -&gt; ()) -&gt; ()"
+                  moduleName = "NewsArticles"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/apunjabi/Documents/iOS%20Projects/NewsArticles/NewsArticles/Network/Routers/APIRouter.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "59"
+                  endingLineNumber = "59"
+                  offsetFromSymbolStart = "520">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "05CF69A5-6DB2-484E-BFF9-62F993A513F5"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "NewsArticles/Network/Routers/APIRouter.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "59"
+            endingLineNumber = "59"
+            landmarkName = "fetch(route:completion:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "05CF69A5-6DB2-484E-BFF9-62F993A513F5 - ecc9269468a0b627"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (Swift.Result&lt;(__C.NSURLResponse, Foundation.Data), Swift.Error&gt;) -&gt; () in (extension in NewsArticles):NewsArticles.APIRouter.fetch&lt;A where A1: Swift.Decodable&gt;(route: NewsArticles.APIConfiguration, completion: (Swift.Result&lt;A1, NewsArticles.APIError&gt;) -&gt; ()) -&gt; ()"
+                  moduleName = "NewsArticles"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/apunjabi/Documents/iOS%20Projects/NewsArticles/NewsArticles/Network/Routers/APIRouter.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "59"
+                  endingLineNumber = "59"
+                  offsetFromSymbolStart = "520">
+               </Location>
+               <Location
+                  uuid = "05CF69A5-6DB2-484E-BFF9-62F993A513F5 - ecc9269468a0b627"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (Swift.Result&lt;(__C.NSURLResponse, Foundation.Data), Swift.Error&gt;) -&gt; () in (extension in NewsArticles):NewsArticles.APIRouter.fetch&lt;A where A1: Swift.Decodable&gt;(route: NewsArticles.APIConfiguration, completion: (Swift.Result&lt;A1, NewsArticles.APIError&gt;) -&gt; ()) -&gt; ()"
+                  moduleName = "NewsArticles"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/apunjabi/Documents/iOS%20Projects/NewsArticles/NewsArticles/Network/Routers/APIRouter.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "59"
+                  endingLineNumber = "59"
+                  offsetFromSymbolStart = "548">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "19DD368B-B03C-4F41-B689-3FE8AA63857F"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "NewsArticles/Network/Routers/APIRouter.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "60"
+            endingLineNumber = "60"
+            landmarkName = "fetch(route:completion:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "D133C48B-593B-4AC1-AD5D-CF4EF2165311"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "NewsArticles/Network/Routers/APIRouter.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "42"
+            endingLineNumber = "42"
+            landmarkName = "getURL(route:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+   </Breakpoints>
+</Bucket>

@@ -31,9 +31,9 @@ enum APIError: Error {
 }
 
 protocol APIRouter {
-    func fetch<T: Decodable>(route: APIConfiguration, _ completion: @escaping (Result<T, APIError>) -> Void)
+    func fetch<T: Decodable>(route: APIConfiguration, completion: @escaping (Result<T, APIError>) -> Void)
     
-    func fetchImage(route: APIConfiguration, _ completion: @escaping (Result<Data, APIError>) -> Void) -> URLSessionDataTask?
+    func fetchImage(route: APIConfiguration, completion: @escaping (Result<Data, APIError>) -> Void) -> URLSessionDataTask?
 }
 
 extension APIRouter {
@@ -41,14 +41,15 @@ extension APIRouter {
     private func getURL(route: APIConfiguration) -> URL? {
         let path = route.path
         
-        guard var urlComponents = URLComponents(string: path) else { return nil }
-        urlComponents.queryItems = route.parameters
-        return urlComponents.url
+        var urlComponents = URLComponents(string: path)
+        urlComponents?.queryItems = route.parameters
+        return urlComponents?.url
     }
     
-    func fetch<T: Decodable>(route: APIConfiguration, _ completion: @escaping (Result<T, APIError>) -> Void) {
+    func fetch<T: Decodable>(route: APIConfiguration, completion: @escaping (Result<T, APIError>) -> Void) {
         
         guard let url = getURL(route: route) else {
+            print("invalid point")
             completion(.failure(.invalidEndpoint))
             return
         }
@@ -81,7 +82,7 @@ extension APIRouter {
         }.resume()
     }
     
-    func fetchImage(route: APIConfiguration, _ completion: @escaping (Result<Data, APIError>) -> Void) -> URLSessionDataTask? {
+    func fetchImage(route: APIConfiguration, completion: @escaping (Result<Data, APIError>) -> Void) -> URLSessionDataTask? {
         
         guard let url = getURL(route: route) else { return nil }
         

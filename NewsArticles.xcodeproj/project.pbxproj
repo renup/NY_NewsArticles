@@ -17,6 +17,10 @@
 		A7C9191B261D41190040139E /* APIConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7C9191A261D41190040139E /* APIConfiguration.swift */; };
 		A7C9191E261D412A0040139E /* APIRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7C9191D261D412A0040139E /* APIRouter.swift */; };
 		A7C91926261FB1A80040139E /* URLSession+Utility.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7C91925261FB1A80040139E /* URLSession+Utility.swift */; };
+		A7C91929261FCEA30040139E /* NewsSearchEndpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7C91928261FCEA30040139E /* NewsSearchEndpoint.swift */; };
+		A7C9192D261FCFE20040139E /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7C9192C261FCFE20040139E /* Constants.swift */; };
+		A7C91932261FD2B10040139E /* NewsSearchRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7C91931261FD2B10040139E /* NewsSearchRouter.swift */; };
+		A7C91937261FD30D0040139E /* NewsSearchResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7C91936261FD30D0040139E /* NewsSearchResponse.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +36,10 @@
 		A7C9191A261D41190040139E /* APIConfiguration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIConfiguration.swift; sourceTree = "<group>"; };
 		A7C9191D261D412A0040139E /* APIRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIRouter.swift; sourceTree = "<group>"; };
 		A7C91925261FB1A80040139E /* URLSession+Utility.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "URLSession+Utility.swift"; sourceTree = "<group>"; };
+		A7C91928261FCEA30040139E /* NewsSearchEndpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsSearchEndpoint.swift; sourceTree = "<group>"; };
+		A7C9192C261FCFE20040139E /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		A7C91931261FD2B10040139E /* NewsSearchRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsSearchRouter.swift; sourceTree = "<group>"; };
+		A7C91936261FD30D0040139E /* NewsSearchResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsSearchResponse.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -64,6 +72,8 @@
 		A749CFD126098B9B000D0A4B /* NewsArticles */ = {
 			isa = PBXGroup;
 			children = (
+				A7C91935261FD2EF0040139E /* Data Models */,
+				A7C9192B261FCFD40040139E /* Shared */,
 				A7C91920261D41310040139E /* Extensions */,
 				A7C91919261D40DC0040139E /* Network */,
 				A7C91914261D40AD0040139E /* Coordinators */,
@@ -105,8 +115,9 @@
 		A7C91919261D40DC0040139E /* Network */ = {
 			isa = PBXGroup;
 			children = (
+				A7C9193A2621B6B90040139E /* Endpoints */,
+				A7C91930261FD2950040139E /* Routers */,
 				A7C9191A261D41190040139E /* APIConfiguration.swift */,
-				A7C9191D261D412A0040139E /* APIRouter.swift */,
 			);
 			path = Network;
 			sourceTree = "<group>";
@@ -117,6 +128,39 @@
 				A7C91925261FB1A80040139E /* URLSession+Utility.swift */,
 			);
 			path = Extensions;
+			sourceTree = "<group>";
+		};
+		A7C9192B261FCFD40040139E /* Shared */ = {
+			isa = PBXGroup;
+			children = (
+				A7C9192C261FCFE20040139E /* Constants.swift */,
+			);
+			path = Shared;
+			sourceTree = "<group>";
+		};
+		A7C91930261FD2950040139E /* Routers */ = {
+			isa = PBXGroup;
+			children = (
+				A7C9191D261D412A0040139E /* APIRouter.swift */,
+				A7C91931261FD2B10040139E /* NewsSearchRouter.swift */,
+			);
+			path = Routers;
+			sourceTree = "<group>";
+		};
+		A7C91935261FD2EF0040139E /* Data Models */ = {
+			isa = PBXGroup;
+			children = (
+				A7C91936261FD30D0040139E /* NewsSearchResponse.swift */,
+			);
+			path = "Data Models";
+			sourceTree = "<group>";
+		};
+		A7C9193A2621B6B90040139E /* Endpoints */ = {
+			isa = PBXGroup;
+			children = (
+				A7C91928261FCEA30040139E /* NewsSearchEndpoint.swift */,
+			);
+			path = Endpoints;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -193,8 +237,12 @@
 				A749CFD726098B9B000D0A4B /* NewsSearchViewController.swift in Sources */,
 				A7C9191B261D41190040139E /* APIConfiguration.swift in Sources */,
 				A749CFD326098B9B000D0A4B /* AppDelegate.swift in Sources */,
+				A7C9192D261FCFE20040139E /* Constants.swift in Sources */,
 				A749CFD526098B9B000D0A4B /* SceneDelegate.swift in Sources */,
 				A7C91916261D40D40040139E /* NewsCoordinator.swift in Sources */,
+				A7C91932261FD2B10040139E /* NewsSearchRouter.swift in Sources */,
+				A7C91937261FD30D0040139E /* NewsSearchResponse.swift in Sources */,
+				A7C91929261FCEA30040139E /* NewsSearchEndpoint.swift in Sources */,
 				A7C91911261D40A80040139E /* NewsSearchViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -46,7 +46,7 @@ final class NewsSearchView: UITableView {
     private func setUpSearch() {
       searchController.searchBar.delegate = self
       searchController.obscuresBackgroundDuringPresentation = false
-      searchController.searchBar.placeholder = "Search by artist name"
+      searchController.searchBar.placeholder = "Search news"
    }
     
     @objc private func filterContentForSearchText(_ searchText: String) {

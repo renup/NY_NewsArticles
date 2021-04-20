@@ -11,16 +11,40 @@ class NewsSearchViewController: UIViewController {
 
     let vm = NewsSearchViewModel()
     
-    var newsDetails: [NewsSearchDetails] = [] {
-        didSet {
-            
+    lazy var tableView: NewsSearchView = {
+        let tableView = NewsSearchView()
+        tableView.didSelectNewsItem = { [weak self] item in
+            self?.didSelectNews(item)
         }
-    }
+        
+        tableView.searching = {[weak self] searchText in
+            self?.searchNews(searchText)
+        }
+        
+        tableView.refreshList = {[weak self] in
+//            self?.refreshList()
+            self?.searchNews("")
+        }
+        return tableView
+    }()
+    
+    var didSelectNews: (NewsSearchDetails) -> Void = { _ in }
+//    var filterContent: (String) -> Void = { _ in }
+    var refreshList: () -> Void = {}
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        view = tableView
         view.backgroundColor = .white
         searchNews("election")
+        title = "Latest News"
+        navigationItem.searchController = tableView.searchController
+        definesPresentationContext = true
+    }
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+        tableView.searchController.dismiss(animated: false, completion: nil)
     }
     
     func searchNews(_ text: String) {
@@ -28,8 +52,8 @@ class NewsSearchViewController: UIViewController {
             guard let self = self else { return }
             switch result {
             case .success(let details):
-                self.newsDetails = details
-                print(self.newsDetails.count)
+                self.tableView.newsList = details
+//                print(self.newsDetails.count)
             case .failure(let error):
                 print(error.description)
             }

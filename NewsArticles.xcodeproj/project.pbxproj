@@ -26,6 +26,7 @@
 		D778E212262EBF5700DC7C6B /* UITableView+Utilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = D778E211262EBF5700DC7C6B /* UITableView+Utilities.swift */; };
 		D778E216262EBFA900DC7C6B /* ReusableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D778E215262EBFA900DC7C6B /* ReusableView.swift */; };
 		D778E21A262EC56A00DC7C6B /* UIView+Utilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = D778E219262EC56A00DC7C6B /* UIView+Utilities.swift */; };
+		D778E2272630200700DC7C6B /* UIImageView+Utilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = D778E2262630200700DC7C6B /* UIImageView+Utilities.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -50,6 +51,7 @@
 		D778E211262EBF5700DC7C6B /* UITableView+Utilities.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITableView+Utilities.swift"; sourceTree = "<group>"; };
 		D778E215262EBFA900DC7C6B /* ReusableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReusableView.swift; sourceTree = "<group>"; };
 		D778E219262EC56A00DC7C6B /* UIView+Utilities.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Utilities.swift"; sourceTree = "<group>"; };
+		D778E2262630200700DC7C6B /* UIImageView+Utilities.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImageView+Utilities.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -149,6 +151,7 @@
 				A7C91925261FB1A80040139E /* URLSession+Utility.swift */,
 				D778E211262EBF5700DC7C6B /* UITableView+Utilities.swift */,
 				D778E219262EC56A00DC7C6B /* UIView+Utilities.swift */,
+				D778E2262630200700DC7C6B /* UIImageView+Utilities.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -277,6 +280,7 @@
 				A7C91932261FD2B10040139E /* NewsSearchRouter.swift in Sources */,
 				D778E216262EBFA900DC7C6B /* ReusableView.swift in Sources */,
 				D778E20F262EBEE700DC7C6B /* NewsCell.swift in Sources */,
+				D778E2272630200700DC7C6B /* UIImageView+Utilities.swift in Sources */,
 				A7C91937261FD30D0040139E /* NewsSearchResponse.swift in Sources */,
 				A7C91929261FCEA30040139E /* NewsSearchEndpoint.swift in Sources */,
 				A7C91911261D40A80040139E /* NewsSearchViewModel.swift in Sources */,

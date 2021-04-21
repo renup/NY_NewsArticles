@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import UIKit
 
 struct NewsSearchDetails {
     let thumbnailURL: String
@@ -33,12 +34,19 @@ final class NewsSearchViewModel {
                     for ele in multiArr {
                         if ele.subtype == "thumbnail" {
                             imagesDictionary["thumb"] = ele.url
+                            print("thumb = \(ele.url)")
                         } else if ele.subtype == "watch268" {
                             imagesDictionary["watch"] = ele.url
+                            print("watch = \(ele.url)")
                         }
                     }
                 
-                    let details = NewsSearchDetails(thumbnailURL: imagesDictionary["thumb"] ?? "", detailImageURL: imagesDictionary["watch"] ?? "", headline: ele.headline.main, abstract: ele.abstract, webURL: ele.web_url)
+                    let details = NewsSearchDetails(
+                        thumbnailURL: imagesDictionary["thumb"] ?? "",
+                        detailImageURL: imagesDictionary["watch"] ?? "",
+                        headline: ele.headline.main, abstract: ele.abstract,
+                        webURL: ele.web_url
+                    )
                     detailsArray.append(details)
                 }
                 completion(.success(detailsArray))
@@ -48,4 +56,5 @@ final class NewsSearchViewModel {
             }
         }
     }
+    
 }

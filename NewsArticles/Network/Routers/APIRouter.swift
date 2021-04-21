@@ -33,7 +33,7 @@ enum APIError: Error {
 protocol APIRouter {
     func fetch<T: Decodable>(route: APIConfiguration, completion: @escaping (Result<T, APIError>) -> Void)
     
-    func fetchImage(route: APIConfiguration, completion: @escaping (Result<Data, APIError>) -> Void) -> URLSessionDataTask?
+    func fetchImage(route: APIConfiguration, completion: @escaping (Result<Data?, APIError>) -> Void) -> URLSessionDataTask?
 }
 
 extension APIRouter {
@@ -82,7 +82,7 @@ extension APIRouter {
         }.resume()
     }
     
-    func fetchImage(route: APIConfiguration, completion: @escaping (Result<Data, APIError>) -> Void) -> URLSessionDataTask? {
+    func fetchImage(route: APIConfiguration, completion: @escaping (Result<Data?, APIError>) -> Void) -> URLSessionDataTask? {
         
         guard let url = getURL(route: route) else { return nil }
         

@@ -9,6 +9,7 @@ import Foundation
 import UIKit
 
 final class NewsCell: UITableViewCell, ReusableView {
+    
     enum Layout {
         static let high: Float = 1000
         static let mid: Float = 999
@@ -20,7 +21,7 @@ final class NewsCell: UITableViewCell, ReusableView {
     
     var urlSessionTask: URLSessionDataTask?
 
-    private(set) lazy var artworkView: UIImageView = {
+    private(set) lazy var thumbnail: UIImageView = {
         let view = UIImageView(frame: .zero)
         view.contentMode = .center
         view.setContentHuggingPriority(UILayoutPriority.init(rawValue: Layout.high), for: .horizontal)
@@ -39,7 +40,7 @@ final class NewsCell: UITableViewCell, ReusableView {
     }()
     
     private(set) lazy var stack: UIStackView = {
-       let stack = UIStackView(arrangedSubviews: [artworkView, titleLabel])
+       let stack = UIStackView(arrangedSubviews: [thumbnail, titleLabel])
         stack.alignment = .center
         stack.axis = .horizontal
         stack.spacing = Layout.spacing
@@ -62,17 +63,30 @@ final class NewsCell: UITableViewCell, ReusableView {
     }
     
     func configure(_ dataModel: NewsSearchDetails) {
-        artworkView.image = UIImage(named: "thumbnail_placeholder")
-//        downloadImageIfNeeded(dataModel.artThumbnailURLString)
-        titleLabel.text = dataModel.headline 
+        thumbnail.image = UIImage(named: "thumbnail_placeholder")
+
+        urlSessionTask = thumbnail.loadImage(dataModel.thumbnailURL) {[weak self] (result) in
+            guard let self = self else { return }
+            switch result {
+            case .success(let image):
+                self.thumbnail.image = image
+            case .failure:
+                self.thumbnail.image = UIImage(named: "thumbnail_placeholder")
+            }
+        }
+        titleLabel.text = dataModel.headline
     }
     
     override func prepareForReuse() {
         super.prepareForReuse()
-        artworkView.image = nil
+        thumbnail.image = nil
         titleLabel.text = nil
         urlSessionTask?.cancel()
         urlSessionTask = nil
+    }
+    
+    func downloadImageIfNeeded(_ urlString: String) {
+        
     }
     
 }

@@ -9,7 +9,7 @@ import UIKit
 
 class NewsSearchViewController: UIViewController {
 
-    let vm = NewsSearchViewModel()
+    let viewModel = NewsSearchViewModel()
     
     lazy var tableView: NewsSearchView = {
         let tableView = NewsSearchView()
@@ -22,14 +22,12 @@ class NewsSearchViewController: UIViewController {
         }
         
         tableView.refreshList = {[weak self] in
-//            self?.refreshList()
             self?.searchNews("")
         }
         return tableView
     }()
     
     var didSelectNews: (NewsSearchDetails) -> Void = { _ in }
-//    var filterContent: (String) -> Void = { _ in }
     var refreshList: () -> Void = {}
     
     override func viewDidLoad() {
@@ -48,12 +46,11 @@ class NewsSearchViewController: UIViewController {
     }
     
     func searchNews(_ text: String) {
-        vm.getNews(for: text) {[weak self] (result) in
+        viewModel.getNews(for: text) {[weak self] (result) in
             guard let self = self else { return }
             switch result {
             case .success(let details):
                 self.tableView.newsList = details
-//                print(self.newsDetails.count)
             case .failure(let error):
                 print(error.description)
             }

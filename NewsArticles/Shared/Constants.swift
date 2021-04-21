@@ -8,7 +8,8 @@
 import Foundation
 
 struct Constants {
-    static let baseURLString = "https://api.nytimes.com"
+    static let baseApiURLString = "https://api.nytimes.com/"
     static let apiKey = "raVLlVmt3S3HAu246G4gPeTMOlIFDSjs"
     static let svcSearch = " svc/search/v2"
+    static let baseURLString = "https://www.nytimes.com/"
 }

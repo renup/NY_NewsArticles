@@ -10,23 +10,26 @@ import Foundation
 enum NewsSearchEndpoint: APIConfiguration {
     
     case searchNews(_ searchText: String)
+    case fetchImage(_ url: String)
     
     struct SearchConstants {
-        static let svcSearch = "/svc/search/v2/"
+        static let svcSearch = "svc/search/v2/"
         static let search = "articlesearch.json"
     }
     
     var path: String {
         switch self {
         case .searchNews:
-            return Constants.baseURLString + SearchConstants.svcSearch + SearchConstants.search
+            return Constants.baseApiURLString + SearchConstants.svcSearch + SearchConstants.search
+        case .fetchImage(let url):
+            return Constants.baseURLString + url
         }
     }
     
     
     var method: String {
         switch self {
-        case .searchNews:
+        case .searchNews, .fetchImage:
             return "GET"
         }
     }
@@ -37,6 +40,8 @@ enum NewsSearchEndpoint: APIConfiguration {
             let apiKeyItem = URLQueryItem(name: "api-key", value: Constants.apiKey)
             let searchItem = URLQueryItem(name: "q", value: searchText)
             return [apiKeyItem, searchItem]
+        case .fetchImage:
+            return []
         }
     }
     

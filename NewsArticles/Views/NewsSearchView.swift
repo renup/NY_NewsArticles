@@ -10,7 +10,6 @@ import UIKit
 
 final class NewsSearchView: UITableView {
 
-    
     var newsList: [NewsSearchDetails] = [] {
         didSet {
             reloadData()

@@ -20,7 +20,6 @@ final class NewsSearchView: UITableView {
     let searchController = UISearchController(searchResultsController: nil)
     var searching: (String) -> Void = { _ in }
     var refreshList: () -> Void = { }
-    var activityView: UIActivityIndicatorView = UIActivityIndicatorView(style: .large)
 
     var isSearchBarEmpty: Bool {
         return searchController.searchBar.text?.isEmpty ?? true
@@ -54,19 +53,6 @@ final class NewsSearchView: UITableView {
     
     func refreshItems() {
         refreshList()
-    }
-    
-    //MARK: Activity Indicator methods
-      
-    func showActivityIndicator() {
-     activityView.center = self.center
-     addSubview(activityView)
-     activityView.startAnimating()
-    }
-
-    func hideActivityIndicator(){
-       activityView.stopAnimating()
-       activityView.hidesWhenStopped = true
     }
 
 }

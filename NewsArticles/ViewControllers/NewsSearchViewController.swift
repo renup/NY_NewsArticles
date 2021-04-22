@@ -29,7 +29,8 @@ class NewsSearchViewController: UIViewController {
     
     var didSelectNews: (NewsSearchDetails) -> Void = { _ in }
     var refreshList: () -> Void = {}
-    
+    var activityView: UIActivityIndicatorView = UIActivityIndicatorView(style: .medium)
+
     override func viewDidLoad() {
         super.viewDidLoad()
         view = tableView
@@ -46,8 +47,10 @@ class NewsSearchViewController: UIViewController {
     }
     
     func searchNews(_ text: String) {
+        showActivityIndicator()
         viewModel.getNews(for: text) {[weak self] (result) in
             guard let self = self else { return }
+            defer { self.hideActivityIndicator() }
             switch result {
             case .success(let details):
                 self.tableView.newsList = details
@@ -57,6 +60,18 @@ class NewsSearchViewController: UIViewController {
         }
     }
 
+    //MARK: Activity Indicator methods
+      
+    func showActivityIndicator() {
+        activityView.center = tableView.center
+        tableView.addSubview(activityView)
+        activityView.startAnimating()
+    }
+
+    func hideActivityIndicator(){
+       activityView.stopAnimating()
+       activityView.hidesWhenStopped = true
+    }
 
 }
 

@@ -64,16 +64,7 @@ final class NewsCell: UITableViewCell, ReusableView {
     
     func configure(_ dataModel: NewsSearchDetails) {
         thumbnail.image = UIImage(named: "thumbnail_placeholder")
-
-        urlSessionTask = thumbnail.loadImage(dataModel.thumbnailURL) {[weak self] (result) in
-            guard let self = self else { return }
-            switch result {
-            case .success(let image):
-                self.thumbnail.image = image
-            case .failure:
-                self.thumbnail.image = UIImage(named: "thumbnail_placeholder")
-            }
-        }
+        urlSessionTask = thumbnail.loadImage(dataModel.thumbnailURL)
         titleLabel.text = dataModel.headline
     }
     

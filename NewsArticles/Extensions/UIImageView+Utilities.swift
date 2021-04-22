@@ -12,28 +12,30 @@ let imageCache = NSCache<NSString, UIImage>()
 
 extension UIImageView {
     
-    func loadImage(_ urlString: String, completion: @escaping (Result<UIImage?, APIError>) -> Void) -> URLSessionDataTask? {
+    func loadImage(_ urlString: String) -> URLSessionDataTask? {
        
         if let img = imageCache.object(forKey: urlString as NSString) {
-            completion(.success(img))
+            image = img
+            return nil
         }
-        return NewsSearchRouter().getImage(urlString) { (result) in
+        return NewsSearchRouter().getImage(urlString) {[weak self] (result) in
+            guard let self = self else { return }
             switch result {
             case .success(let data):
                 guard let dt = data, let img = UIImage(data: dt) else {
-                    DispatchQueue.main.async {
-                        completion(.failure(.missingData))
-                    }
+                    
                     return
                 }
                  DispatchQueue.main.async {
                     imageCache.setObject(img, forKey: urlString as NSString)
-                    
-                    completion(.success(img))
+                    self.image = img
                 }
             case .failure(let error):
                 DispatchQueue.main.async {
-                    completion(.failure(error))
+                    #if DEBUG
+                    print("error downloading image = \(error.description), for url = \(urlString)")
+                    #endif
+                    self.image = UIImage(named: "thumbnail_placeholder")
                 }
             }
         }

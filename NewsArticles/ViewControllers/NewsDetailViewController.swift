@@ -10,15 +10,19 @@ import UIKit
 
 final class NewsDetailViewController: UIViewController {
     
-    private lazy var newsDetailsView: NewsDetailView = {
-        let detailsView = NewsDetailView()
-        return detailsView
-    }()
+    private var newsDetailsView: NewsDetailView?
     
     var details: NewsSearchDetails?
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        setUp()
+    }
+    
+    private func setUp() {
+        guard let newsDetails = details else { return }
+        newsDetailsView = NewsDetailView(details: newsDetails)
+        view = newsDetailsView
     }
     
     

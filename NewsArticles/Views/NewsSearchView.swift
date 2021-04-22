@@ -77,7 +77,6 @@ extension NewsSearchView: UITableViewDataSource {
         cell.configure(newsList[indexPath.row])
         return cell
     }
-    
 }
 
 extension NewsSearchView: UISearchBarDelegate {

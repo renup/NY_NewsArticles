@@ -11,12 +11,15 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 
     var window: UIWindow?
 
+    private var newsCoordinator: NewsCoordinator?
 
     func scene(_ scene: UIScene, willConnectTo session: UISceneSession, options connectionOptions: UIScene.ConnectionOptions) {
         guard let windowScene = (scene as? UIWindowScene) else { return }
         window = UIWindow(windowScene: windowScene)
-        let navigationController = UINavigationController(rootViewController: NewsSearchViewController())
+        let navigationController = UINavigationController()
+        newsCoordinator = NewsCoordinator(navigationController: navigationController)
         window?.rootViewController = navigationController
+        newsCoordinator?.start()
         window?.makeKeyAndVisible()
     }
 

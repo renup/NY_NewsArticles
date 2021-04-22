@@ -48,6 +48,7 @@ class NewsSearchViewController: UIViewController {
     
     func searchNews(_ text: String) {
         showActivityIndicator()
+        /// Fetching news based on search text
         viewModel.getNews(for: text) {[weak self] (result) in
             guard let self = self else { return }
             defer { self.hideActivityIndicator() }

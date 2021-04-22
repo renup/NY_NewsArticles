@@ -9,6 +9,7 @@ import Foundation
 
 enum NewsSearchEndpoint: APIConfiguration {
     
+    //https://api.nytimes.com/svc/search/v2/articlesearch.json?q=election&api-key=raVLlVmt3S3HAu246G4gPeTMOlIFDSjs
     case searchNews(_ searchText: String)
     case fetchImage(_ url: String)
     

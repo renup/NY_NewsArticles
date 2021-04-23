@@ -19,7 +19,8 @@ class NewsSearchViewModelTests: XCTestCase {
     }
 
     override func tearDownWithError() throws {
-        // Put teardown code here. This method is called after the invocation of each test method in the class.
+        viewModel = nil
+        router = nil
     }
     
     func test_getNews_should_return_newsSearchDetails() {
@@ -37,18 +38,6 @@ class NewsSearchViewModelTests: XCTestCase {
         let detail = detailsArray[0]
         XCTAssertEqual("A Treasury Department document shed more light on links between the campaign and Russian spies.", detail.abstract)
         
-    }
-
-    func testExample() throws {
-        // This is an example of a functional test case.
-        // Use XCTAssert and related functions to verify your tests produce the correct results.
-    }
-
-    func testPerformanceExample() throws {
-        // This is an example of a performance test case.
-        self.measure {
-            // Put the code you want to measure the time of here.
-        }
     }
 
 }

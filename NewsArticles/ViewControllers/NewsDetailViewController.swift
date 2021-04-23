@@ -7,6 +7,7 @@
 
 import Foundation
 import UIKit
+import MessageUI
 
 final class NewsDetailViewController: UIViewController {
     
@@ -23,8 +24,25 @@ final class NewsDetailViewController: UIViewController {
         guard let newsDetails = details else { return }
         newsDetailsView = NewsDetailView(details: newsDetails)
         view = newsDetailsView
+        
+        let leftBarButton = UIBarButtonItem(
+            title: "Share",
+            style: .plain,
+            target: self,
+            action: #selector(shareNews(_:))
+        )
+        navigationItem.setRightBarButton(leftBarButton, animated: true)
     }
     
-    
+    @objc func shareNews(_ sender: UIBarButtonItem) {
+        guard let newsDetail = details else { return }
+        
+        let activity = UIActivityViewController(
+            activityItems: ["Check out this news:  ", newsDetail.webURL],
+            applicationActivities: nil
+          )
+          activity.popoverPresentationController?.barButtonItem = sender
+          present(activity, animated: true, completion: nil)
+    }
     
 }

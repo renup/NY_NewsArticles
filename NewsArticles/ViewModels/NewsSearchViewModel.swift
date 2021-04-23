@@ -16,9 +16,13 @@ struct NewsSearchDetails {
     let webURL: String
 }
 
-final class NewsSearchViewModel {
+class NewsSearchViewModel {
     
-    let router = NewsSearchRouter()
+    let router: NewsSearchRouter
+    
+    init(router: NewsSearchRouter = NewsSearchRouter()) {
+        self.router = router
+    }
     
     func getNews(for searchTerm: String, _ completion: @escaping (Result<[NewsSearchDetails], APIError>) -> Void){
         var detailsArray = [NewsSearchDetails]()

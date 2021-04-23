@@ -24,7 +24,7 @@
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
             uuid = "EECC3A5D-DDBA-42E7-8370-232AC195EF70"
-            shouldBeEnabled = "Yes"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "NewsArticles/Coordinators/NewsCoordinator.swift"
@@ -39,16 +39,32 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "63814DA9-E9F8-4335-9E74-1D98A3D270A7"
+            uuid = "B51B93A3-FF01-409C-9397-5D8C3225BA3A"
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "NewsArticles/Views/NewsDetailView.swift"
+            filePath = "NewsArticlesTests/TestingTools/JsonKit.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "55"
-            endingLineNumber = "55"
-            landmarkName = "configure()"
+            startingLineNumber = "29"
+            endingLineNumber = "29"
+            landmarkName = "newsItems(_:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "B3C3A92C-B1E6-4B29-8C54-C2B36D81A977"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "NewsArticlesTests/TestingTools/JsonKit.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "30"
+            endingLineNumber = "30"
+            landmarkName = "newsItems(_:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>

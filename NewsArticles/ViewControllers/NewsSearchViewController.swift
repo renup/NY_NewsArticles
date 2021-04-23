@@ -36,7 +36,7 @@ class NewsSearchViewController: UIViewController {
         view = tableView
         view.backgroundColor = .white
         searchNews("election")
-        title = "Latest News"
+        title = "News"
         navigationItem.searchController = tableView.searchController
         definesPresentationContext = true
     }

@@ -7,7 +7,7 @@
 
 import Foundation
 
-final class NewsSearchRouter: APIRouter {
+class NewsSearchRouter: APIRouter {
     
     func getNews(_ search: String, completion: @escaping (Result<NewsSearchResponse, APIError>) -> Void) {
         

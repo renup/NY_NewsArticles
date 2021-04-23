@@ -30,6 +30,8 @@ final class NewsSearchView: UITableView {
         registerCell()
         delegate = self
         dataSource = self
+        estimatedRowHeight = 250
+        rowHeight = UITableView.automaticDimension
         setUpSearch()
     }
     
@@ -76,6 +78,10 @@ extension NewsSearchView: UITableViewDataSource {
         let cell = tableView.dequeReusableCell(for: indexPath) as NewsCell
         cell.configure(newsList[indexPath.row])
         return cell
+    }
+    
+    func tableView(_ tableView: UITableView, estimatedHeightForRowAt indexPath: IndexPath) -> CGFloat {
+        return 250
     }
 }
 

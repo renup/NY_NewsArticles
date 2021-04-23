@@ -35,7 +35,6 @@ final class NewsCell: UITableViewCell, ReusableView {
         label.font = UIFont.boldSystemFont(ofSize: 15)
         label.textAlignment = .left
         label.numberOfLines = 0
-        label.setContentHuggingPriority(UILayoutPriority.defaultLow, for: .horizontal)
         return label
     }()
     
@@ -74,10 +73,6 @@ final class NewsCell: UITableViewCell, ReusableView {
         titleLabel.text = nil
         urlSessionTask?.cancel()
         urlSessionTask = nil
-    }
-    
-    func downloadImageIfNeeded(_ urlString: String) {
-        
     }
     
 }
